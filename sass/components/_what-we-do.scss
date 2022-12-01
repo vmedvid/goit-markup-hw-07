@@ -1,0 +1,49 @@
+.what-we-do-section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(42 / 36);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--text-color-main);
+}
+
+.what-we-do-section {
+    padding-top: 0;
+}
+
+.what-we-do-section-title {
+    margin-bottom: 50px;
+}
+
+.what-we-do-list {
+    display: flex;
+}
+
+.what-we-do-item {
+    position: relative;
+    margin-right: 30px;
+}
+
+.what-we-do-item:last-child {
+    margin-right: 0px;
+}
+
+.what-we-do-title {
+    position: absolute;
+    bottom: 0;
+
+    margin: 0;
+    padding: 27px 0 27px;
+    width: 100%;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    background-color: rgba(47, 48, 58, 0.8);
+}

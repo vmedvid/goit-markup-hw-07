@@ -1,0 +1,296 @@
+.hero-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    z-index: 1;
+
+    opacity: 1;
+
+    transition-property: opacity, visibility;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.hero-button-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 528px;
+    min-height: 581px;
+
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-backdrop.is-hidden .hero-button-form {
+    transform: translate(-50%, -50%) scale(0.2);
+}
+
+.modal-button-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background: #ffffff;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button-close-icon {
+    fill: #000000;
+}
+
+.modal-button-close:hover .modal-button-close-icon {
+    fill: var(--brand-color);
+}
+
+.modal-title {
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--text-color-main);
+}
+
+.modal-button-send {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.06em;
+    border: 0px solid transparent;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    color: var(--team-card-background-color);
+    background-color: var(--brand-color);
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button-send:hover,
+.modal-button-send:focus {
+    background-color: #188ce8;
+}
+
+.contacts-form {
+    display: block;
+    padding: 40px;
+    width: 100%;
+    align-items: center;
+}
+
+.form-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-field-policy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.form-field-policy label {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+
+    color: var(--text-color-secondary);
+    overflow: hidden;
+}
+
+.policy-link {
+    margin-left: 3px;
+    color: var(--brand-color);
+}
+
+.form-field label {
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+
+    color: var(--text-color-secondary);
+}
+
+.form-field input {
+    padding: 12px 12px 12px 42px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.01em;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: transparent;
+
+    cursor: pointer;
+
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:hover input,
+.form-field:focus input {
+    border: 1px solid var(--brand-color);
+}
+
+.form-field input:hover,
+.form-field input:focus {
+    border: 1px solid var(--brand-color);
+}
+
+textarea {
+    resize: none;
+}
+
+.form-field textarea {
+    padding: 12px 16px;
+    height: 120px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: transparent;
+
+    cursor: pointer;
+
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field textarea::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field textarea:hover,
+.form-field textarea:focus {
+    border: 1px solid var(--brand-color);
+}
+
+.form-icon {
+    position: absolute;
+    left: 12px;
+    bottom: 11px;
+    width: 18px;
+    height: 18px;
+
+    fill: var(--text-color-main);
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field input:hover~.form-icon,
+.form-icon:hover {
+    fill: var(--brand-color);
+}
+
+.form-field:focus-within>.form-icon {
+    fill: var(--brand-color);
+}
+
+.form-field-policy input[type="checkbox"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
+.policy-checkbox-icon {
+    margin-right: 7px;
+    width: 16px;
+    height: 15px;
+    fill: var(--text-color-main);
+}
+
+.policy-checkbox:checked+.policy-checkbox-icon {
+    display: none;
+}
+
+.policy-check-icon {
+    display: none;
+}
+
+.policy-checkbox:checked~.policy-check-icon {
+    display: block;
+    margin-right: 7px;
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    fill: var(--team-card-background-color);
+    background-color: var(--brand-color);
+}
